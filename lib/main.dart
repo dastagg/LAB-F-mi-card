@@ -13,35 +13,20 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                width: 100.0,
-                color: Colors.red,
+          child: Column(
+            children: const [
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('assets/images/Linux_Tux.png'),
               ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 100.0,
-                      height: 100.0,
-                      color: Colors.yellow,
-                    ),
-                    Container(
-                      width: 100.0,
-                      height: 100.0,
-                      color: Colors.green,
-                    )
-                  ],
+              Text(
+                'David Stagowski',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
-              Container(
-                width: 100.0,
-                color: Colors.blue,
-              ),
-
             ],
           ),
         ),
