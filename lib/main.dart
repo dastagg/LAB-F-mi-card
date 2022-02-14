@@ -14,12 +14,12 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            children: const [
-              CircleAvatar(
+            children: [
+              const CircleAvatar(
                 backgroundImage: AssetImage('assets/images/Linux_Tux.png'),
                 radius: 50.0,
               ),
-              Text(
+              const Text(
                 'David Stagowski',
                 style: TextStyle(
                   color: Colors.white,
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(
+              const Text(
                 'FLUTTER APPRENTICE',
                 style: TextStyle(
                   color: Colors.white,
@@ -36,6 +36,50 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'SourceSansPro',
                   fontWeight: FontWeight.bold,
                   letterSpacing: 2.0,
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                padding: const EdgeInsets.all(10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Row(
+                  children: const [
+                    Icon(
+                      Icons.phone,
+                      color: Colors.black,
+                    ),
+                    SizedBox(width: 20.0),
+                    Text(
+                      '312-555-1212',
+                      style: TextStyle(
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 20.0,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                padding: const EdgeInsets.all(10.0),
+                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Row(
+                  children: const [
+                    Icon(
+                      Icons.email,
+                      color: Colors.black,
+                    ),
+                    SizedBox(width: 20.0),
+                    Text(
+                      'flutter@example.com',
+                      style: TextStyle(
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 20.0,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
