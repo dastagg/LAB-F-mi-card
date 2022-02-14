@@ -16,15 +16,26 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: const [
               CircleAvatar(
-                radius: 50.0,
                 backgroundImage: AssetImage('assets/images/Linux_Tux.png'),
+                radius: 50.0,
               ),
               Text(
                 'David Stagowski',
                 style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Pacifico',
                   fontSize: 40.0,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'FLUTTER APPRENTICE',
+                style: TextStyle(
                   color: Colors.white,
+                  fontSize: 20.0,
+                  fontFamily: 'SourceSansPro',
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2.0,
                 ),
               ),
             ],
