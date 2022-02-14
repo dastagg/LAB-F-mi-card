@@ -14,12 +14,13 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            children: [
-              const CircleAvatar(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              CircleAvatar(
                 backgroundImage: AssetImage('assets/images/Linux_Tux.png'),
                 radius: 50.0,
               ),
-              const Text(
+              Text(
                 'David Stagowski',
                 style: TextStyle(
                   color: Colors.white,
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const Text(
+              Text(
                 'FLUTTER APPRENTICE',
                 style: TextStyle(
                   color: Colors.white,
@@ -38,48 +39,41 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.0,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                padding: const EdgeInsets.all(10.0),
-                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: const [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.black,
-                    ),
-                    SizedBox(width: 20.0),
-                    Text(
-                      '312-555-1212',
-                      style: TextStyle(
-                        fontFamily: 'SourceSansPro',
-                        fontSize: 20.0,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.white,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                padding: const EdgeInsets.all(10.0),
-                margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: const [
-                    Icon(
-                      Icons.email,
-                      color: Colors.black,
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.blue,
+                  ),
+                  title: Text(
+                    '312-555-1212',
+                    style: TextStyle(
+                      color: Colors.blue,
                     ),
-                    SizedBox(width: 20.0),
-                    Text(
-                      'flutter@example.com',
-                      style: TextStyle(
-                        fontFamily: 'SourceSansPro',
-                        fontSize: 20.0,
-                        color: Colors.black,
-                      ),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.blue,
+                  ),
+                  title: Text(
+                    'flutter@example.com',
+                    style: TextStyle(
+                      color: Colors.blue,
                     ),
-                  ],
+                  ),
                 ),
               ),
             ],
